@@ -1,7 +1,5 @@
 require 'reel'
 
-require "ssevents/version"
-
 class Ssevents < Reel::Server
   include Celluloid::Logger
 
