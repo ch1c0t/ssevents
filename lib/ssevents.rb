@@ -1,8 +1,8 @@
 require 'reel'
 
-require "sse/version"
+require "ssevents/version"
 
-class SSE < Reel::Server
+class Ssevents < Reel::Server
   include Celluloid::Logger
 
   def initialize data_source, ip = '127.0.0.1', port = 44444
