@@ -5,8 +5,9 @@ require "sse/version"
 class SSE < Reel::Server
   include Celluloid::Logger
 
-  def initialize ip = '127.0.0.1', port = 44444
+  def initialize data_source, ip = '127.0.0.1', port = 44444
     @connections = []
+    @data_source = data_source
     @data = ''
 
     async.ring
@@ -55,8 +56,8 @@ class SSE < Reel::Server
   end
 
   def ring
-    every 2 do
-      broadcast "ololo"
+    every 1 do
+      broadcast @data_source.call
     end
   end
 end
