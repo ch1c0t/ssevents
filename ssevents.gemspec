@@ -1,11 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'sse/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "sse"
-  spec.version       = SSE::VERSION
+  spec.name          = "ssevents"
+  spec.version       = "0.0.1"
   spec.authors       = ["Anatoly Chernow"]
   spec.email         = ["ch1c0t@yahoo.com"]
   spec.description   = %q{Minimal server-sent events}
