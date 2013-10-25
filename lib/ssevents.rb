@@ -59,3 +59,5 @@ class Ssevents < Reel::Server
     end
   end
 end
+
+Ssevents.run -> { 'ololo' }
